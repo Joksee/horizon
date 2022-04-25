@@ -12,7 +12,8 @@ class Category extends Model
     protected $fillable = [
         'name_category',
         'image_category',
-        'description_category'
+        'description_category',
+        'description2_category'
     ];
 
     protected $dates = [

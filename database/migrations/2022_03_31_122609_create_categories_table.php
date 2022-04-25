@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->string('image_category');
             //$table->binary('image_category');
             $table->string('description_category');
+            $table->string('description2_category');
             $table->timestamps();
             $table->softDeletes();
         });

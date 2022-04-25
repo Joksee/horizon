@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/nbc5nyh.css">
     <link rel="stylesheet" href="{{asset('css/app.css')}}"/>
     
-
+    
 
     <link id="favicon" rel="shortcut icon" href="{{asset('images/Asset 1.svg')}}" sizes="16x16" type="image/svg">
     <link id="favicon" rel="shortcut icon" href="{{asset('images/Asset 1.svg')}}" sizes="32x32" type="image/svg">
@@ -43,7 +43,9 @@
     <link rel="apple-touch-icon" sizes="256x256" href="{{asset('images/Asset 1.svg')}}">
     <link rel="apple-touch-icon" sizes="384x384" href="{{asset('images/Asset 1.svg')}}">
     <link rel="apple-touch-icon" sizes="512x512" href="{{asset('images/Asset 1.svg')}}">
-
+    @toastr_css
+    @toastr_js
+    @toastr_render
     <!-- Lightbox -->
     <link rel="stylesheet" type="text/css" href="{{asset('lightbox/css/lightbox.css')}}"/>
 </head>
@@ -52,7 +54,7 @@
     <div class="main-wrapper">
         <div class="flex-container">
             <a class="logotipo" href="{{route('site.home')}}"> 
-                <img src="{{asset('images/Asset 1.svg')}}" style="width: 300px;">
+                <img src="{{asset('images/Asset 2.svg')}}" style="width: 300px;">
             </a>
             <ul class="navigation__itens" id="menu">
                 <li>
@@ -139,17 +141,17 @@
 
 
 <!-- Scripts -->
+
 {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--}}
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="{{asset('lightbox/js/lightbox.js')}}"></script>
-<!-- Scripts
-@toastr_js
-@toastr_render
-@toastr_css
--->
+<!-- Scripts-->
+
+
+
 <script>
     $("#toggle").click(function () {
         $(this).toggleClass("on")

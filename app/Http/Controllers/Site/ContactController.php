@@ -22,7 +22,7 @@ class ContactController extends Controller
         return view('Site.Contact.Index');
     }
 
-    public function formulario(request $request)
+    public function formulario(ContactFormRequest $request)
     {
         //método para o formulário de contato
         //ddd($request->all);

@@ -28,7 +28,7 @@
         <section class="products__list">
             <header>
                 <h2 class="title-large">Categoria: {{$category->name_category}} </h2>
-                <!--<p>Descrição 2 do projeto (criar no BD) </p>-->
+                <p>{{$category->description2_category}}</p>
             </header>
             @foreach($category->products as $product)
             <article class="product">
@@ -53,7 +53,7 @@
 
                     <!-- teste da imagem da aba de produto -->
                     <div class="product__image">
-                        <img src="{{asset($product->image_products)}}" style="width: 322px;">
+                        <img src="{{asset($product->image_products)}}" style="width: 200px;">
                     </div>
 
                 </section>
