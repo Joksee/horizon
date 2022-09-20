@@ -16,9 +16,10 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('name_services');
-            $table->string('image_sevices');
+            $table->string('image_services');
             //$table->binary('image_services');
             $table->string('description_services');
+            $table->text('description2_services');
             $table->timestamps();
             $table->softDeletes();
         });

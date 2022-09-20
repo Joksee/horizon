@@ -32,7 +32,7 @@ Route::group(['namespace'=>'App\Http\Controllers\Site'],function(){
 
     //adiconar rotas mais tarde para  aba dos serviços, trocar oa tributo slug para outro atributo
     Route::get('/Serviços', 'ServicesController@index')->name('site.services');
-    Route::get('/Serviços/{slug}', 'ServicesController@show')->name('site.services.category');
+    Route::get('/Serviços/{service}', 'ServicesController@show')->name('site.services.servicelists');
 
     Route::view('/sobre', 'Site.About.Index')->name('site.about');
 

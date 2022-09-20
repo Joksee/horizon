@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Services;
 
 class ServicesController extends Controller
 {
@@ -14,7 +15,13 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        return view('Site.Services.Index');
+        //$services = Services::all();
+        //return dd($services);
+
+        return view('Site.Services.Index', 
+        ['services' => Services::all()] 
+    
+    ); 
     }
 
 
@@ -24,10 +31,10 @@ class ServicesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
-    {
+    public function show(Services $service)
+    { 
         //
-        return view('Site.Services.show', ['slug'=> $slug]);
+        return view('site.Services.show', ['service' => $service->load('servicelists')]);;
     }
 
 }

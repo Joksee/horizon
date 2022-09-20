@@ -14,14 +14,14 @@
                 <article class="card__product">
                     <a href="{{route('site.products.category', ['category' => $category])}}">
                         <div class="card__cover">
-                            <img src="{{asset($category->image_category)}}">
+                            <img src="{{asset($category->image_category)}}" style="height: 200px;">
                         </div>
                         <header class="card__product-header">
                             <h2 class="title-medium">{{$category->name_category}}</h2>
                             <p>{{$category->description_category}}</p>
                         </header>
                     </a>
-                </article>
+                </article> 
             @endforeach
         </section>
     </div>
